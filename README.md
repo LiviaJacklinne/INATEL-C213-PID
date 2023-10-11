@@ -12,7 +12,9 @@ Carregamos o arquivo TransferFunction, de acordo com número do nosso grupo e pl
 ### Questão 2 
 Fizemos a analise do gráfico e calculamos os valores de K, θ e τ, usando o metodo de SMITH
 > K = 2,98
+
 > θ = 0,64
+
 > τ = 3,135 
 
 ### Questão 3
