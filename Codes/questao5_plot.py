@@ -12,9 +12,10 @@ kp_chr = 0.994
 ti_chr = 3.135
 td_chr = 0.3175
 
-print('Kp calculado por ZN = ', kp_chr)
-print('Ti calculado por ZN = ', ti_chr)
-print('Td calculado por ZN = ', td_chr)
+print('Método de CHR1')
+print('Kp = ', kp_chr)
+print('Ti = ', ti_chr)
+print('Td = ', td_chr, "\n")
 
 # escrevendo a função de transferência da planta
 num = np.array([k])
@@ -55,9 +56,10 @@ kp_cc = 2.2928
 ti_cc = 1.4426
 td_cc = 0.2227
 
-print('Kp calculado por CC = ', kp_cc)
-print('Ti calculado por CC = ', ti_cc)
-print('Td calculado por CC = ', td_cc)
+print('Método de Cohen e Coon')
+print('Kp = ', kp_cc)
+print('Ti = ', ti_cc)
+print('Td = ', td_cc)
 
 # escrevendo a função de transferência da planta
 num_cc = np.array([k])
@@ -93,11 +95,11 @@ Hcl_cc = cnt.feedback(Hdel_cc, 1)
 t = np.linspace(50, 90, 100)
 (t, y1) = cnt.step_response(2*Hcl_cc, t)
 
-plt.plot(t, y, label='CHR - Método Clássico')
+plt.plot(t, y, label='CHR1 - Método Clássico')
 plt.plot(t, y1, label='CC - Método Novo')
 plt.xlabel(' t [ s ] ')
 plt.ylabel('Amplitude')
-plt.legend(loc='upper right')
+plt.legend(loc='lower right')
 plt.title('Controle PID')
 
 plt.grid()

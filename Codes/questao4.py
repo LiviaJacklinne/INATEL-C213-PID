@@ -17,7 +17,7 @@ Theta = 0.63 >> 0.65 # atraso de propagação
 
 k = 2.84
 tau = 3.13
-Theta = 0.65
+Theta = 0.65  # 0.63
 
 num = np. array ([k])
 den = np. array ([tau , 1])
@@ -27,18 +27,19 @@ n_pade = 20
 H_pade = cnt.tf( num_pade , den_pade )
 Hs = cnt.series (H , H_pade)
 Hmf = cnt.feedback(Hs, 1)
-
 t = np . linspace (0 ,40, 100)
 
 # Vamos multiplicar Hs e Hmf por 2, pq é o valor do degrau
 (t , y ) = cnt.step_response ( 2*Hs, t )
-(t , y1 ) = cnt.step_response ( 2*Hmf, t)
+plt.plot(t, y, label='Malha Aberta')
 
-plot1 = plt.plot (t , y, label='Saida' )
-plot2 = plt.plot (t , y1, label='Degrau de Entrada' )
+(t , y1 ) = cnt.step_response ( 2*Hmf, t)
+plt.plot(t, y1, label='Malha Fechada')
+
 plt.xlabel ( ' t [ s ] ')
 plt.ylabel('Amplitude')
+plt.legend(loc='lower right')
 
-plt.title('Função Estimada')
+plt.title('Malha Aberta x Malha Fechada')
 plt.grid ()
 plt.show()

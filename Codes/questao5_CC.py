@@ -14,9 +14,10 @@ class CC:
         ti_cc = 1.4426
         td_cc = 0.2227
 
-        print('Kp calculado por CC = ', kp_cc)
-        print('Ti calculado por CC = ', ti_cc)
-        print('Td calculado por CC = ', td_cc)
+        print('Método de Cohen e Coon')
+        print('Kp = ', kp_cc)
+        print('Ti = ', ti_cc)
+        print('Td = ', td_cc)
 
         # escrevendo a função de transferência da planta
         num_cc = np.array([k])
@@ -54,7 +55,7 @@ class CC:
         plt.plot(t, y)
         plt.xlabel(' t [ s ] ')
         plt.ylabel('Amplitude')
-        plt.legend(loc='upper right')
+        plt.legend(loc='lower right')
         plt.title('Controle PID - Método Novo CC')
 
         plt.grid()

@@ -14,9 +14,10 @@ class CHR1:
         ti_chr = 3.135
         td_chr = 0.3175
 
-        print('Kp calculado por ZN = ', kp_chr)
-        print('Ti calculado por ZN = ', ti_chr)
-        print('Td calculado por ZN = ', td_chr)
+        print('Método de CHR1')
+        print('Kp = ', kp_chr)
+        print('Ti = ', ti_chr)
+        print('Td = ', td_chr)
 
         # escrevendo a função de transferência da planta
         num = np.array([k])
@@ -54,7 +55,7 @@ class CHR1:
         plt.plot(t, y)
         plt.xlabel(' t [ s ] ')
         plt.ylabel('Amplitude')
-        plt.legend(loc='upper right')
+        plt.legend(loc='lower right')
         plt.title('Controle PID - Método Clássico CHR1')
 
         plt.grid()
