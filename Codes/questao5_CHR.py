@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 class CHR1: 
     def calc_chr():
         # considerando uma função de transferencia em malha aberta FT=k/(tau*s+1)
-        k = 2.84
-        tau = 3.13
-        Theta = 0.65
+        k = 2.98
+        tau = 11.925
+        Theta = 4.925
 
         # Fazendo os cálculos de Kp, Ti, Td usando o método CHR1
-        kp_chr = 0.994
-        ti_chr = 3.135
-        td_chr = 0.3175
+        kp_chr = 0.48
+        ti_chr = 11.925
+        td_chr = 2.46
 
         print('Método de CHR1')
         print('Kp = ', kp_chr)

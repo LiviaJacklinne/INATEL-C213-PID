@@ -2,22 +2,9 @@ import numpy as np
 import control as cnt
 import matplotlib.pyplot as plt
 
-'''
-Função de malha aberta, segundo os valores de K, THETA e TAU que achamos 
-pelo metodo SMITH
-
-'''
-#considerando uma função de transferencia em malha aberta FT=k/(tau*s+1)
-'''
-Ajustes finos 
-k = 2.97 >> 2.84
-tau = 3.13
-Theta = 0.63 >> 0.65 # atraso de propagação
-'''
-
-k = 2.84
-tau = 3.13
-Theta = 0.65  # 0.63
+k = 2.98
+tau = 11.925
+Theta = 4.925
 
 num = np. array ([k])
 den = np. array ([tau , 1])

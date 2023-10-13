@@ -6,13 +6,14 @@ class CC:
 
     def calc_cc():
         # considerando uma função de transferencia em malha aberta FT=k/(tau*s+1)
-        k = 2.84
-        tau = 3.13
-        Theta = 0.65
+        k = 2.98
+        tau = 11.925
+        Theta = 4.925
+
         # Fazendo os cálculos de Kp, Ti, Td usando o método CC
-        kp_cc = 2.2928
-        ti_cc = 1.4426
-        td_cc = 0.2227
+        kp_cc = 1.73
+        ti_cc = 10.42
+        td_cc = 1.67
 
         print('Método de Cohen e Coon')
         print('Kp = ', kp_cc)
