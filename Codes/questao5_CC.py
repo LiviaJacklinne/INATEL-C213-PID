@@ -11,7 +11,7 @@ class CC:
         Theta = 4.925
 
         # Fazendo os cálculos de Kp, Ti, Td usando o método CC
-        kp_cc = 1.73
+        kp_cc = 1.16
         ti_cc = 10.42
         td_cc = 1.67
 
@@ -61,5 +61,3 @@ class CC:
 
         plt.grid()
         plt.show()
-
-        return 'oi'

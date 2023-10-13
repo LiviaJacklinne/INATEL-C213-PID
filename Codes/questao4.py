@@ -30,3 +30,5 @@ plt.legend(loc='lower right')
 plt.title('Malha Aberta x Malha Fechada')
 plt.grid ()
 plt.show()
+
+#

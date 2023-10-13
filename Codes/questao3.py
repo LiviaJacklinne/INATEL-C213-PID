@@ -1,10 +1,8 @@
 import numpy as np
 import control as cnt
 import matplotlib.pyplot as plt
-# from loadmat import plot1
 
 from scipy.io import loadmat
-
 
 mat=loadmat('TransferFunction2.mat')
 degrau = mat.get('degrau')

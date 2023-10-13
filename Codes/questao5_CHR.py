@@ -60,3 +60,4 @@ class CHR1:
 
         plt.grid()
         plt.show()
+        #

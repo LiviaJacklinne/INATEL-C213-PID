@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 from questao5_CC import *
 from questao5_CHR import *
 
-k = 2.84
-tau = 3.13
-Theta = 0.65
+k = 2.98
+tau = 11.925
+Theta = 4.925 
 
 def PID():
     print('Insira agora os dados dos parâmetros PID')
