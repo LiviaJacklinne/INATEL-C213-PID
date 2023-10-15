@@ -20,7 +20,7 @@ n_pade = 20
 ( num_pade , den_pade ) = cnt.pade ( Theta , n_pade )
 H_pade = cnt.tf( num_pade , den_pade )
 Hs = cnt.series (H , H_pade)
-t = np . linspace (0 ,40, 100)
+t = np . linspace (0 ,70, 100)
 
 # Vamos multiplicar Hs por 2, pq é o valor do degrau
 (t , y ) = cnt.step_response ( 2*Hs, t )

@@ -1,6 +1,12 @@
 import numpy as np
 import control as cnt
 import matplotlib.pyplot as plt
+from scipy.io import loadmat
+
+mat=loadmat('TransferFunction2.mat')
+degrau = mat.get('degrau')
+saida=mat.get('saida')
+t1 = mat.get('t')
 
 k = 2.98
 tau = 11.925
@@ -14,7 +20,7 @@ n_pade = 20
 H_pade = cnt.tf( num_pade , den_pade )
 Hs = cnt.series (H , H_pade)
 Hmf = cnt.feedback(Hs, 1)
-t = np . linspace (0 ,40, 100)
+t = np . linspace (0 ,70, 100)
 
 # Vamos multiplicar Hs e Hmf por 2, pq é o valor do degrau
 (t , y ) = cnt.step_response ( 2*Hs, t )
@@ -22,6 +28,8 @@ plt.plot(t, y, label='Malha Aberta')
 
 (t , y1 ) = cnt.step_response ( 2*Hmf, t)
 plt.plot(t, y1, label='Malha Fechada')
+
+plot2 = plt.plot(t1.T, degrau, label='Degrau de entrada')
 
 plt.xlabel ( ' t [ s ] ')
 plt.ylabel('Amplitude')
@@ -31,4 +39,4 @@ plt.title('Malha Aberta x Malha Fechada')
 plt.grid ()
 plt.show()
 
-#
+print(max(saida))
