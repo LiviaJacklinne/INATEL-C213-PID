@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 class CHR1: 
     def calc_chr():
         # considerando uma função de transferencia em malha aberta FT=k/(tau*s+1)
-        k = 2.98
+        k = 2.90
         tau = 11.925
         Theta = 4.925
 
@@ -50,9 +50,9 @@ class CHR1:
         # Fazendo a realimentação
         Hcl = cnt.feedback(Hdel, 1)
 
-        t = np.linspace(50, 90, 100)
+        t = np.linspace(0, 120, 200)
         (t, y) = cnt.step_response(2*Hcl, t)
-        plt.plot(t, y)
+        plt.plot(t, y, 'r', label='CHR1 - Método Clássico CHR1')
         plt.xlabel(' t [ s ] ')
         plt.ylabel('Amplitude')
         plt.legend(loc='lower right')

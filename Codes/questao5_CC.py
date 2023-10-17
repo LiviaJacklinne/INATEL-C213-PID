@@ -51,9 +51,9 @@ class CC:
         # Fazendo a realimentação
         Hcl_cc = cnt.feedback(Hdel_cc, 1)
 
-        t = np.linspace(50, 90, 100)
+        t = np.linspace(0, 120, 100)
         (t, y) = cnt.step_response(2*Hcl_cc, t)
-        plt.plot(t, y)
+        plt.plot(t, y, 'r', label='CC - Método Novo')
         plt.xlabel(' t [ s ] ')
         plt.ylabel('Amplitude')
         plt.legend(loc='lower right')

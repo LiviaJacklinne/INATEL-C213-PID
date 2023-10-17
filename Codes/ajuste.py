@@ -8,7 +8,7 @@ tau = 11.925
 Theta = 4.925
 
 # Fazendo os cálculos de Kp, Ti, Td usando o método CHR1
-kp_chr = 0.48
+kp_chr = 0.30
 ti_chr = 11.925
 td_chr = 2.46
 
@@ -48,13 +48,14 @@ Hdel = cnt.series(Hs, Hctrl)
 # Fazendo a realimentação
 Hcl = cnt.feedback(Hdel, 1)
 
-t = np.linspace(0, 60, 100)
+t = np.linspace(0, 140, 100)
 (t, y) = cnt.step_response(2*Hcl, t)
 
 # Fazendo os cálculos de Kp, Ti, Td usando o método CC
-kp_cc = 1.16
+kp_cc = 0.27
 ti_cc = 10.42
 td_cc = 1.67
+
 
 print('Método de Cohen e Coon')
 print('Kp = ', kp_cc)
@@ -97,6 +98,7 @@ t = np.linspace(0, 150, 100)
 
 plt.plot(t, y, label='CHR1 - Método Clássico')
 plt.plot(t, y1, label='CC - Método Novo')
+
 plt.xlabel(' t [ s ] ')
 plt.ylabel('Amplitude')
 plt.legend(loc='lower right')
